@@ -24,6 +24,7 @@ To identify and classify cyber threats (e.g., malicious or benign) in real-time 
 ## 🧠 Tech Stack
 
 - **Language**: Python 3.11.9
+HTML,CSS,JS
 - **Libraries**:
   - Pandas, NumPy
   - scikit-learn, XGBoost
@@ -55,6 +56,7 @@ AI_Cyber_Threat_Detection_System/
 │ └── utils/
 │ ├── preprocessing.py
 │ └── evaluation.py
+|---AI-Cyber-Threat-Detection-System
 
 ---
 
