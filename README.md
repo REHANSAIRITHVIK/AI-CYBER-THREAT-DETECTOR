@@ -56,7 +56,7 @@ AI_Cyber_Threat_Detection_System/
 │ └── utils/
 │ ├── preprocessing.py
 │ └── evaluation.py
-|---AI-Cyber-Threat-Detection-Dashboard
+|---AI_Cyber_Threat_Detection_Dashboard
 
 ---
 
