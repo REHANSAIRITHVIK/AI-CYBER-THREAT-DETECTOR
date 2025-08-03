@@ -1,6 +1,6 @@
 # 🔐 AI Cyber Threat Detection System
 
-An intelligent machine learning-based system that detects cyber threats from network traffic using Python and AI.
+An intelligent machine learning-based system that detects cyber threats from network traffic using Python AI And HTML, CSS, JS.
 
 ---
 
