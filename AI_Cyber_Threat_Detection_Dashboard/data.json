@@ -1,0 +1,16 @@
+{
+  "threats_detected": 243,
+  "threats_mitigated": 197,
+  "system_accuracy": 96.7,
+  "systems_scanned": 1254,
+  "timeline": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "values": [800, 650, 700, 820, 910, 1050]
+  },
+  "traffic": {
+    "labels": ["00:00", "04:00", "08:00", "12:00", "16:00"],
+    "normal": [3000, 2000, 6000, 10000, 7000],
+    "suspicious": [200, 100, 400, 600, 300],
+    "malicious": [50, 30, 200, 300, 120]
+  }
+}

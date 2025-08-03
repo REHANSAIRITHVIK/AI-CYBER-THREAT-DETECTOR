@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Cyber Threat Detection Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6fa;
+    }
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background-color: #2e3b4e;
+      color: white;
+      float: left;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    .main {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .metrics {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .charts {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .chart-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .percentage {
+      color: green;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Navigation</h2>
+    <ul>
+      <li><strong>DASHBOARD</strong></li>
+      <li>Overview</li>
+      <li>Reports</li>
+      <br/>
+      <li><strong>MONITORING</strong></li>
+      <li>Network Traffic</li>
+      <li>Endpoint Security</li>
+      <li>Access Controls</li>
+      <li>Active Alerts 🔴 7</li>
+      <br/>
+      <li><strong>ANALYSIS</strong></li>
+      <li>Forensic Analysis</li>
+      <li>Threat Intelligence</li>
+      <li>ML Model Training</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h1>AI Cyber Threat Detection System</h1>
+      <h3>Created by: DASIKA R SAI RITHVIK</h3>
+    </div>
+
+    <div class="metrics">
+      <div class="card">
+        <h2>Threats Detected Today</h2>
+        <p><strong>243</strong></p>
+        <p class="percentage">▲ 12% from previous period</p>
+      </div>
+      <div class="card">
+        <h2>Threats Mitigated</h2>
+        <p><strong>197</strong></p>
+        <p class="percentage">▲ 8% from previous period</p>
+      </div>
+      <div class="card">
+        <h2>AI System Accuracy</h2>
+        <p><strong>96.7%</strong></p>
+        <p class="percentage">▲ 1.2% from previous period</p>
+      </div>
+      <div class="card">
+        <h2>Systems Scanned</h2>
+        <p><strong>1,254</strong></p>
+        <p class="percentage">▲ 3% from previous period</p>
+      </div>
+    </div>
+
+    <div class="charts">
+      <div class="chart-box">
+        <h2>Threat Detection Timeline</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h2>Network Traffic Analysis</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+  </div>
+  
+  <div id="dashboardPanel">...Dashboard content...</div>
+<div id="networkPanel" style="display:none">...Network Traffic content...</div>
+<div id="endpointPanel" style="display:none">...Endpoint Security content...</div>
+
+<div id="dashboardPanel" class="panel">...</div>
+<div id="networkPanel" class="panel" style="display:none">...</div>
+
+
+  <script>
+    // Line chart
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    const lineChart = new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: 'Malware',
+            data: [300, 250, 180, 210, 190, 230, 300],
+            backgroundColor: 'rgba(128, 0, 128, 0.2)',
+            borderColor: 'purple',
+            fill: true
+          },
+          {
+            label: 'Phishing',
+            data: [400, 450, 470, 500, 520, 540, 560],
+            backgroundColor: 'rgba(144, 238, 144, 0.2)',
+            borderColor: 'green',
+            fill: true
+          },
+          {
+            label: 'DDoS',
+            data: [200, 180, 190, 220, 250, 260, 280],
+            backgroundColor: 'rgba(255, 255, 0, 0.2)',
+            borderColor: 'orange',
+            fill: true
+          },
+          {
+            label: 'Data Breaches',
+            data: [100, 90, 85, 95, 100, 110, 120],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'red',
+            fill: true
+          }
+        ]
+      }
+    });
+
+    // Bar chart
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['00:00', '04:00', '08:00', '12:00', '16:00'],
+        datasets: [
+          {
+            label: 'Normal Traffic',
+            data: [3000, 1000, 4000, 7000, 5000],
+            backgroundColor: 'green'
+          },
+          {
+            label: 'Suspicious Traffic',
+            data: [300, 200, 400, 600, 500],
+            backgroundColor: 'orange'
+          },
+          {
+            label: 'Malicious Traffic',
+            data: [100, 80, 200, 300, 150],
+            backgroundColor: 'red'
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+	
+	function showPanel(panelId) {
+    const panels = document.querySelectorAll('.panel');
+    panels.forEach(panel => panel.style.display = 'none');
+    document.getElementById(panelId).style.display = 'block';
+}
+
+  </script>
+
+</body>
+</html>
