@@ -1,6 +1,6 @@
 # 🔐 AI Cyber Threat Detection System
 
-An intelligent machine learning-based system that detects cyber threats from network traffic using Python and AI.
+An intelligent machine learning-based system that detects cyber threats from network traffic using Python AI And HTML, CSS, JS.
 
 ---
 
@@ -24,6 +24,7 @@ To identify and classify cyber threats (e.g., malicious or benign) in real-time 
 ## 🧠 Tech Stack
 
 - **Language**: Python 3.11.9
+HTML,CSS,JS
 - **Libraries**:
   - Pandas, NumPy
   - scikit-learn, XGBoost
@@ -55,6 +56,12 @@ AI_Cyber_Threat_Detection_System/
 │ └── utils/
 │ ├── preprocessing.py
 │ └── evaluation.py
+|---AI_Cyber_Threat_Detection_Dashboard
+    |___ backend.py
+    |___ data.json
+    |___ index.html 
+    |___ style.css
+    |___ script.js
 
 ---
 
@@ -67,8 +74,13 @@ cd AI-CYBER-THREAT-DETECTOR
 Step 2: Install dependencies
 pip install -r requirements.txt
 
-Step 3: Run the system
+Step 3: Run the system (CMD VIEWER)
 python src/main.py
+
+(WEB BROWSER VIEWER)
+python backend.py
+
+index.html
  
 🔍 Sample Output
 [INFO] Loaded dataset with 100000 rows.
