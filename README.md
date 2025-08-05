@@ -68,7 +68,9 @@ AI_Cyber_Threat_Detection_System/
 ## 🚀 How to Run the Project
 
 ### Step 1: Clone the repository
-git clone https://github.com/REHANSAIRITHVIK/AI-CYBER-THREAT-DETECTOR.git
+git clone
+ https://github.com/REHANSAIRITHVIK/AI-CYBER-THREAT-DETECTOR.git
+
 cd AI-CYBER-THREAT-DETECTOR
 
 Step 2: Install dependencies
@@ -78,8 +80,6 @@ Step 3: Run the system (CMD VIEWER)
 python src/main.py
 
 (WEB BROWSER VIEWER)
-python backend.py
-
 index.html
  
 🔍 Sample Output
